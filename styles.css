@@ -1,0 +1,956 @@
+#charity-banner {
+    background-color: #0f361f;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    line-height: 1; /* Висота текстового елементу рівна висоті тексту */
+    position: relative; /* Налаштування позиції для псевдоелементів */
+    display: flex;
+    align-items: center; /* Вирівнювання тексту та значків по центру вертикалі */
+    justify-content: center; /* Вирівнювання тексту та значків по центру горизонталі */
+}
+#charity-banner::before {
+    content: "";
+    background-image: url('ukraineFlag.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+#charity-banner p {
+    margin: 0;
+}
+#charity-banner::after {
+    content: "";
+    background-image: url('ukraineFlag.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    margin-right: 15px; /* Змінено відстань праворуч для псевдоелемента ::after */
+}
+#charity-banner:hover {
+    text-decoration: underline;
+}
+/* Повернись живим */
+
+/* Задній фон */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Щоб відео займало весь екран */
+    z-index: -1; /* Помістіть відео за всі елементи */
+}
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden; /* Запобігти прокрутці */
+}
+#background-video::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Затемнення */
+    z-index: -1;
+    opacity: 0.8;
+}
+/* Задній фон */
+
+/* Горизонтальне меню */
+nav {
+    text-align: center;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    display: inline-block;
+    margin: 0 10px;
+    position: relative; /* Додаємо позицію для підменю */
+    border: 2px solid #fff; /* Додаємо білу рамочку */
+    border-radius: 15px; /* Заокруглюємо кути */
+    padding: 10px;
+    transition: transform 0.3s ease-in-out; /* Додаємо анімацію */
+}
+li:hover {
+    transform: scale(1.1); /* Збільшуємо розмір при наведенні */
+}
+a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+li.submenu-trigger {
+    color: #fff; /* Змінюємо колір тексту кнопки "Дивитись онлайн" */
+    font-weight: bold; /* Додаємо жирність */
+}
+
+/* Стилізація підменю "Дивитись онлайн" */
+.submenu {
+    display: none;
+    position: absolute;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    top: 100%;
+    left: 50%; /* Позиціонуємо підменю в центр батьківського пункту */
+    transform: translateX(-50%); /* Вирівнюємо по центру горизонталі */
+}
+.submenu a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 2px; /* Збільшуємо відстань між підпунктами */
+}
+/* Показуємо підменю при наведенні на батьківський пункт */
+li:hover .submenu {
+    display: block;
+}
+
+/* Розтягнув на весь екран картинку */
+#background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+#background-image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+    opacity: 0.8;
+}
+/* Розтягнув на весь екран картинку */
+
+/* Пульсуючий текст WINNERS SPORTS HUB- */
+#centered-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#centered-text p.bold-text {
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 5px;
+    display: inline-block;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#centered-text p {
+    font-size: 25px;
+    line-height: 1.5;
+    margin: 0;
+}
+/* Пульсуючий текст WINNERS SPORTS HUB- */
+
+/* Додатковий текст */
+#additional-text {
+    position: absolute;
+    top: 50%; /* Змініть це значення залежно від вашого вибору */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#additional-text p.bold-text {
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+#additional-text p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0;
+}
+/* Додатковий текст */
+
+/* Зміни для тексту ДОДАТКОВА ІНФОРМАЦІЯ */
+#greeting-text {
+    text-align: justify;
+    color: #fff;
+    font-size: 25px;
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+}
+#greeting-text p {
+    font-size: 25px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    background-color: rgba(169, 169, 169, 0.3);
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Тінь для оригінальності */
+}
+#greeting-text p:first-child {
+    font-weight: bold;
+    font-size: 25px;
+    background: none;
+    box-shadow: none; /* Відміна тіні для першого параграфу */
+}
+/* Зміни для тексту ДОДАТКОВА ІНФОРМАЦІЯ */
+
+/* Для тексту Розглянемо команди.... */
+#teams-list-container {
+    position: relative;
+}
+#teams-list {
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+    white-space: nowrap;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-bottom: 20px;
+}
+
+.highlight-text {
+    background-color: transparent; /* прозорий фон всередині */
+    padding: 10px; /* величина відступу */
+    border-radius: 15px; /* радіус заокруглення кутів */
+    display: inline-block; /* щоб блок залишався в одному рядку */
+    border: 2px solid #c0c0c0; /* контур сірого кольору */
+}
+/* Для тексту Розглянемо команди.... */
+
+/* Для розміщення та іншого картинок */
+#image-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 45vh; /* Змінено з absolute на margin-top */
+    margin-bottom: 20px; /* Додано margin-bottom для відстані від тексту */
+}
+.image-container {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px; /* Додайте відстань між рядками */
+}
+.image-container img {
+    width: 85%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s; /* Додаємо анімацію збільшення та підсвічування */
+}
+/* Стилізація гріда для картинок */
+.image-container img:hover {
+    transform: scale(1.1) translateY(0); /* Збільшуємо розмір та використовуємо translateY(0) для уникнення обрізання верху картинок */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Додаємо підсвічування */
+}
+/* Для розміщення та іншого картинок */
+
+/* Стилі для нового блоку div */
+#greeting-text {
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    margin-top: 60px; /* Змініть відстань від картинок за потреби */
+}
+body {/* Для прокрутки сторінки */
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    overflow: auto; /* Змінено з hidden на auto, щоб дозволити прокрутку */
+}
+/* Надпис з правого нижнього кута екрану */
+#copyright {
+    position: fixed;
+    bottom: -20px; /* Змінено відстань від нижнього краю */
+    right: 0;
+    padding: 10px;
+    font-size: 17px;
+    color: #363636; /* Сірий колір тексту */
+    opacity: 0; /* Початкова прозорість 0 */
+    transition: opacity 0.3s ease-in-out; /* Додано анімацію зміни прозорості */
+}
+/* Надпис з правого нижнього кута екрану */
+
+
+
+/* Стилі для блоків команд та зображень */
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px; /* Задайте максимальну ширину за потребою */
+    margin: 20px auto; /* Задайте потрібний відступ */
+}
+.team-item {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.team-item img {
+    max-width: 100%; /* Забезпечте, щоб зображення не виходило за межі контейнера */
+}
+.team-item p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: white; /* Білий колір тексту */
+    padding: 5px 10px; /* Збільште відступи для кращого вигляду */
+    background: rgba(0, 0, 0, 0.8); /* Чорний колір тла з прозорістю 80% */
+    border: 2px solid white; /* Біла рамка товщиною 2px */
+    border-radius: 5px; /* Закруглені кути рамки */
+    transition: border 0.3s, background 0.3s, box-shadow 0.3s; /* Додано плавні переходи */
+    display: inline-block; /* Забезпечте, щоб рамка обгортала текст, а не всю ширину */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* Тінь темного кольору */
+}
+.team-item p:hover {
+    border: 2px solid black; /* Зміна колір рамки при наведенні */
+    background: white; /* Зміна колір тла при наведенні */
+    color: black; /* Зміна колір тексту при наведенні */
+    animation: pulse 0.5s infinite alternate; /* Додано мигання при наведенні */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* Тінь темного кольору при наведенні */
+}
+@keyframes pulse {
+    to {
+        border-color: black;
+        background-color: white;
+        color: black;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* Додано тінь при миганні */
+    }
+}
+/* Стилі для блоків команд та зображень */
+hr.full-width {
+    width: calc(100vw - 20px); /* Вираховуємо ширину відображення екрану, віднімаючи від неї відступи (20px) */
+    border: none;
+    height: 2px; /* Товщина лінії */
+    color: #fff; /* Колір лінії */
+    background-color: #fff; /* Колір лінії */
+    margin: 10px 0; /* Відступи від тексту */
+    position: absolute; /* Забезпечує абсолютне позиціонування */
+    left: 0;
+    right: 0;
+}
+/* Контейнер для рамки */
+.frame-container {
+    position: relative;
+}
+/* Рамка для тексту і відео */
+.frame {
+    position: absolute;
+    top: 150px;
+    left: 120px;
+    right: 120px;
+    bottom: 320px;
+    z-index: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    overflow: hidden; /* Заборона прокрутки рамки */
+}
+/* Текст у ПРАВИЛАХ */
+#fast-football-text {
+    position: absolute;
+    left: 146px; /* Оновлений відступ від лівого краю */
+    top: 150px; /* Оновлений відступ зверху */
+    font-weight: bold;
+    font-size: 40px;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    z-index: 1; /* Переконайтеся, що текст знаходиться перед рамкою */
+    padding: 20px; /* Відступ всередині рамки */
+    background: none; /* Забирає фон */
+    border-radius: 15px; /* Радіус заокруглення кутів рамки */
+}
+#fast-football-text p {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    animation: pulseText 1s ease-in-out infinite alternate;
+}
+/* Текст у ПРАВИЛАХ */
+#tournament-goal {
+    position: absolute;
+    left: 165px;
+    top: 300px; /* Змінимо відступ зверху, щоб текст був під попереднім */
+    font-family: 'Your Preferred Font', sans-serif;
+    font-size: 26px;
+    line-height: 1.5;
+    color: #ffffff;
+    z-index: 1; /* Переконайтеся, що текст знаходиться перед рамкою */
+}
+#tournament-goal p {
+    font-family: 'Your Preferred Font', sans-serif;
+    font-size: 25px;
+    line-height: 1.5;
+    color: #ffffff;
+    max-width: 50ch;
+    overflow-wrap: break-word;
+    margin-bottom: 1.5em;
+}
+/* ВІДЕО ПРО ПРАВИЛА */
+#rules-video {
+    position: absolute;
+    top: 198px; /* Відступ від верху екрану */
+    right: 165px; /* Відступ від правого краю екрану */
+    max-width: 700px; /* Максимальна ширина відео */
+    z-index: 1; /* Переконайтеся, що відео знаходиться перед рамкою */
+}
+#rules-video video {
+    width: 100%; /* Заповнення ширини батьківського контейнера */
+    height: auto; /* Автоматична висота відповідно до ширини */
+}
+/* Рамка для нового div */
+#reglament {
+    position: absolute;
+    top: 700px; /* Відстань від початку сторінки */
+    left: 50px;
+    width: calc(100% - 300px); /* Ширина відстані між лівим і правим відступами */
+    z-index: 1; /* Переконайтеся, що рамка знаходиться перед текстом та відео */
+}
+#reglament p {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+#ruless {
+    position: absolute;
+    top: 800px; /* вказати необхідну відстань під #reglament */
+    left: 160px;
+    width: calc(100% - 300px);
+}
+#ruless p:nth-child(1),
+#ruless p:nth-child(11),
+#ruless p:nth-child(32),
+#ruless p:nth-child(54),
+#ruless p:nth-child(61),
+#ruless p:nth-child(63) {
+    color: orange;
+}
+#ruless p {
+    color: white;
+    font-size: 16px;
+}
+#video-heading {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+/* Стилі для простого тексту */
+.video-ogliad {
+    text-align: center;
+    margin: 30px 50px 50px;
+}
+.video-ogliad p {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, red, blue);
+    border-image-slice: 1;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: border-width 0.3s, border-radius 0.3s, transform 0.3s ease-in-out;
+}
+.video-ogliad p:hover {
+    transform: scale(1.1);
+}
+/* Стилі для контейнера відео */
+.video-container {
+    text-align: center;
+    margin-top: -25px;
+}
+/* Стилі для iframe відео */
+.video-container iframe {
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, red, blue);
+    border-image-slice: 1;
+    /* border-radius: 10px; */ /* Видаліть або закоментуйте цей рядок */
+    transition: border-radius 0.3s;
+}
+.fulls-width{
+    width: calc(100vw - 20px); /* Вираховуємо ширину відображення екрану, віднімаючи від неї відступи (20px) */
+    border: none;
+    height: 2px; /* Товщина лінії */
+    color: #fff; /* Колір лінії */
+    background-color: #fff; /* Колір лінії */
+    margin: 10px 0; /* Відступи від тексту */
+    position: absolute; /* Забезпечує абсолютне позиціонування */
+    left: 0;
+    right: 0;
+    top: 1020px;
+}
+/* Стилі для iframe відео */
+.video-ogliad1 {
+    text-align: center;
+    margin: 65px 50px 50px; /* 1-ше це відстань донизу */
+}
+.video-ogliad1 p {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, red, blue);
+    border-image-slice: 1;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: border-width 0.3s, border-radius 0.3s, transform 0.3s ease-in-out;
+}
+.video-ogliad1 p:hover {
+    transform: scale(1.1);
+}
+.video-containet {
+    text-align: center;
+    margin-top: -25px;
+}
+/* Стилі для iframe відео */
+.video-containet iframe {
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, red, blue);
+    border-image-slice: 1;
+    /* border-radius: 10px; */ /* Видаліть або закоментуйте цей рядок */
+    transition: border-radius 0.3s;
+}
+.fulld-width {
+    width: calc(100vw - 20px);
+    border: none;
+    height: 2px;
+    color: #fff;
+    background-color: #fff;
+    margin: 10px 0;
+    position: relative; /* Змінено на relative */
+    left: 0;
+    right: 0;
+    margin-top: 15px; /* Змінено відступ зверху */
+    top: 22px;
+}
+.video-ogliad2 {
+    text-align: center;
+    margin: 53px 50px 50px; /* 1-ше це відстань донизу */
+}
+.video-ogliad2 p {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, red, blue);
+    border-image-slice: 1;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: border-width 0.3s, border-radius 0.3s, transform 0.3s ease-in-out;
+}
+.video-ogliad2 p:hover {
+    transform: scale(1.1);
+}
+.video-containek {
+    text-align: center;
+    margin-top: -25px;
+}
+.video-containek iframe {
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, red, blue);
+    border-image-slice: 1;
+    transition: border-radius 0.3s;
+}
+.fullp-width {
+    width: calc(100vw - 20px);
+    border: none;
+    height: 2px;
+    color: #fff;
+    background-color: #fff;
+    margin: 10px 0;
+    position: relative; /* Змінено на relative */
+    left: 0;
+    right: 0;
+    margin-top: 15px; /* Змінено відступ зверху */
+    top: 22px;
+}
+.video-ogliad3 {
+    text-align: center;
+    margin: 53px 50px 50px; /* 1-ше це відстань донизу */
+}
+.video-ogliad3 p {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, red, blue);
+    border-image-slice: 1;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: border-width 0.3s, border-radius 0.3s, transform 0.3s ease-in-out;
+}
+.video-ogliad3 p:hover {
+    transform: scale(1.1);
+}
+.video-containeс {
+    text-align: center;
+    margin-top: -25px;
+}
+.video-containeс iframe {
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, red, blue);
+    border-image-slice: 1;
+    transition: border-radius 0.3s;
+}
+.fulll-width {
+    width: calc(100vw - 20px);
+    border: none;
+    height: 2px;
+    color: #fff;
+    background-color: #fff;
+    margin: 10px 0;
+    position: relative; /* Змінено на relative */
+    left: 0;
+    right: 0;
+    margin-top: 15px; /* Змінено відступ зверху */
+    top: 22px;
+}
+.video-ogliad4 {
+    text-align: center;
+    margin: 53px 50px 50px; /* 1-ше це відстань донизу */
+}
+.video-ogliad4 p {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, red, blue);
+    border-image-slice: 1;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: border-width 0.3s, border-radius 0.3s, transform 0.3s ease-in-out;
+}
+.video-ogliad4 p:hover {
+    transform: scale(1.1);
+}
+.video-containes {
+    text-align: center;
+    margin-top: -25px;
+}
+.video-containes iframe {
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, red, blue);
+    border-image-slice: 1;
+    transition: border-radius 0.3s;
+}
+.fullz-width {
+    width: calc(100vw - 20px);
+    border: none;
+    height: 2px;
+    color: #fff;
+    background-color: #fff;
+    margin: 10px 0;
+    position: relative; /* Змінено на relative */
+    left: 0;
+    right: 0;
+    margin-top: 15px; /* Змінено відступ зверху */
+    top: 22px;
+}
+.video-ogliad5 {
+    text-align: center;
+    margin: 53px 50px 50px; /* 1-ше це відстань донизу */
+}
+.video-ogliad5 p {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, red, blue);
+    border-image-slice: 1;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: border-width 0.3s, border-radius 0.3s, transform 0.3s ease-in-out;
+}
+.video-ogliad5 p:hover {
+    transform: scale(1.1);
+}
+.video-containew {
+    text-align: center;
+    margin-top: -25px;
+}
+.video-containew iframe {
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, red, blue);
+    border-image-slice: 1;
+    transition: border-radius 0.3s;
+}
+.fullb-width {
+    width: calc(100vw - 20px);
+    border: none;
+    height: 2px;
+    color: #fff;
+    background-color: #fff;
+    margin: 10px 0;
+    position: relative; /* Змінено на relative */
+    left: 0;
+    right: 0;
+    margin-top: 15px; /* Змінено відступ зверху */
+    top: 22px;
+}
+.fullq-width {
+    width: calc(100vw - 20px);
+    border: none;
+    height: 2px;
+    color: #fff;
+    background-color: #fff;
+    margin: 10px 0;
+    position: relative; /* Змінено на relative */
+    left: 0;
+    right: 0;
+    margin-top: 15px; /* Змінено відступ зверху */
+    top: 22px;
+}
+.video-ogliad9 {
+    text-align: center;
+    margin: 53px 50px 50px; /* 1-ше це відстань донизу */
+}
+.video-ogliad9 p {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, red, blue);
+    border-image-slice: 1;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: border-width 0.3s, border-radius 0.3s, transform 0.3s ease-in-out;
+}
+.video-ogliad9 p:hover {
+    transform: scale(1.1);
+}
+.video-football {
+    text-align: center;
+    margin: 53px 50px 50px; /* Відстань від назви "Football" донизу */
+}
+.video-football video {
+    width: 100%; /* Зробити відео на повну ширину контейнера */
+    max-width: 1120px; /* Задати максимальну ширину відео */
+    height: auto; /* Автоматична висота, щоб зберегти пропорції */
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, red, blue);
+    border-image-slice: 1;
+    border-radius: 10px;
+    margin-top: -30px;
+    transition: border-width 0.3s, border-radius 0.3s, transform 0.3s ease-in-out;
+}
+.video-football .video-footbal {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+.video-football video:hover {
+    transform: scale(1.1);
+}
+
+
+
+.table1 {
+    text-align: center;
+    margin: 35px 50px 50px; /* 1-ше це відстань донизу */
+}
+.table1 p {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    color: white; /* Зміна кольору тексту на білий */
+    background-color: rgba(255, 255, 255, 0); /* Зміна кольору фону на прозорий білий */
+    padding: 20px;
+    border: 2px solid white; /* Зміна кольору обведення на білий */
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: border-width 0.3s, border-radius 0.3s, transform 0.3s ease-in-out;
+}
+.table1 p:hover {
+    transform: scale(1.1);
+}
+.table11 {
+    text-align: center;
+    margin: 0 auto; /* Зробити блок по центру екрана */
+    max-width: 800px; /* Зменшено максимальну ширину */
+    margin-bottom: 25px; /* Додано відстань між table11 та result1 */
+}
+.table11 img {
+    width: 100%; /* Зробити зображення на повну ширину контейнера */
+    height: auto; /* Автоматична висота, щоб зберегти пропорції */
+    border: 2px solid white; /* Білий колір обведення рамки */
+    border-radius: 10px;
+    margin-top: -30px;
+    transition: border-width 0.3s, border-radius 0.3s, transform 0.3s ease-in-out;
+}
+.table11 .table111 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+.result1 {
+    text-align: center;
+    margin: 0 auto 50px; /* Відступ зверху і вирівнювання по горизонталі, відстань між table11 та result1 */
+    max-width: 800px;
+}
+.result1 img {
+    width: 100%;
+    height: auto;
+    border: 2px solid white;
+    border-radius: 10px;
+    transition: border-width 0.3s, border-radius 0.3s, transform 0.3s ease-in-out;
+}
+.result1 .result111 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+#teams-listtt-container {
+    position: relative;
+}
+#teams-listtt {
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+    white-space: nowrap;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-bottom: 20px;
+    margin-top: 1470px; /* Опускаємо текст на 50 пікселів донизу */
+}
+#backgroundabout {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Забезпечує, що відео буде позаду інших елементів */
+}
+.overlad {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Чорний колір з 70% прозорістю */
+    z-index: -1; /* Забезпечує, що чорний екран також буде позаду інших елементів */
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-right: 50px;
+}
+.custom-button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+}
+.custom-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+.image23 {
+    display: flex;
+    gap: 50px; /* Проміжок у 30 пікселів між картинками */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    margin-top: -435px; /* Опускаємо текст на 50 пікселів донизу */
+    overflow: hidden; /* Заборона прокрутки */
+}
+#sponsors-text {
+    text-align: center;
+    margin-top: 560px;
+  }
+  #sponsors-text p {
+    color: #3c4c64;
+    font-size: 20px;
+    margin: 0;
+  }
+  .line {
+    height: 1px;
+    width: 36%;
+    background-color: #3c4c64;
+    margin: 15px auto 5px; /* Зменшено відстань до лінії */
+  }

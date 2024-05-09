@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гравці команд - Titan Kings</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!-- Блок з темно-зеленою стрічкою та благодійним повідомленням -->
+    <div id="charity-banner" onclick="openLink()">
+        <p>ДОПОМОЖЕМО УКРАЇНІ - ПІДТРИМАЙТЕ БЛАГОДІЙНИЙ ФОНД "ПОВЕРНИСЬ ЖИВИМ"!</p>
+    </div>
+    <div id="copyright">
+        <p>&copy; 2023 Titan Kings Football Team</p>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="practice.html">Головна сторінка</a></li>
+            <li><a href="players.html">Гравці команд</a></li>
+            <li><a href="videos.html">Відео огляди матчів</a></li>
+            <li><a href="table.html">Турнірна таблиця</a></li>
+            <li><a href="rules.html">Правила гри 'Швидкий Футбол'</a></li>
+            <li><a href="contacts.html">Контакти</a></li>
+            <li class="submenu-trigger" onmouseover="toggleSubMenu()" onmouseout="toggleSubMenu()">Дивитись онлайн
+                <ul class="submenu">
+                    <li><a href="https://www.youtube.com/@WinnersGoalProCup" target="_blank">Швидкий футбол</a></li>
+                    <li><a href="https://www.twitch.tv/winnersbeachvolleyball_1" target="_blank">Пляжний волейбол</a></li>
+                    <li><a href="https://www.youtube.com/@WINCUP1-Table-Tennis/videos" target="_blank">Настільний теніс</a></li>
+                    <li><a href="https://www.esportclub.pro/ru" target="_blank">Кіберспорт</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <img src="background for team.jpg" alt="Background Image" id="background-image">
+    <!-- Додайте скрипти, як у practice.html -->
+
+<!-- Додаємо 15 зображень та назв команд -->
+    <div class="team-container">
+        <div id="blaze-warriors" class="team-item">
+            <p>КОМАНДА BLAZE WARRIORS</p>
+            <img src="blaze warriors team.jpg" alt="Team 1" style="margin-bottom: 10px;">
+            <hr class="full-width">
+            <!-- Решта коду ... -->
+        </div>
+<div id="city-lions" class="team-item">
+    <p>КОМАНДА CITY LIONS</p>
+    <img src="city lions team.jpg" alt="Team 2" style="margin-bottom: 10px;">
+    <hr class="full-width">
+</div>
+<div id="football-ninjas" class="team-item">
+    <p>КОМАНДА FOOTBALL NINJAS</p>
+    <img src="football ninjas team.jpg" alt="Team 3" style="margin-bottom: 10px;">
+    <hr class="full-width">
+</div>
+<div id="joga-gangers" class="team-item">
+    <p>КОМАНДА JOGA GANGERS</p>
+    <img src="joga gangers team.jpg" alt="Team 4" style="margin-bottom: 10px;">
+    <hr class="full-width">
+</div>
+<div id="liberty-tigers" class="team-item">
+    <p>КОМАНДА LIBERTY TIGERS</p>
+    <img src="liberty tigers team.jpg" alt="Team 5" style="margin-bottom: 10px;">
+    <hr class="full-width">
+</div>
+<div id="maverick-avengers" class="team-item">
+    <p>КОМАНДА MAVERICK AVENGERS</p>
+    <img src="maverick avengers team.jpg" alt="Team 6" style="margin-bottom: 10px;">
+    <hr class="full-width">
+</div>
+
+<div id="mighty-spartans" class="team-item">
+    <p>КОМАНДА MIGHTY SPARTANS</p>
+    <img src="mighty spartans team.jpg" alt="Team 7" style="margin-bottom: 10px;">
+    <hr class="full-width">
+</div>
+
+<div id="razor-sharks" class="team-item">
+    <p>КОМАНДА RAZOR SHARKS</p>
+    <img src="razor sharks team.jpg" alt="Team 8" style="margin-bottom: 10px;">
+    <hr class="full-width">
+</div>
+
+<div id="savage-hunters" class="team-item">
+    <p>КОМАНДА SAVAGE HUNTERS</p>
+    <img src="savage hunters team.jpg" alt="Team 9" style="margin-bottom: 10px;">
+    <hr class="full-width">
+</div>
+
+<div id="shadow-wolves" class="team-item">
+    <p>КОМАНДА SHADOW WOLVES</p>
+    <img src="shadow wolves team.jpg" alt="Team 10" style="margin-bottom: 10px;">
+    <hr class="full-width">
+</div>
+
+<div id="silver-hawks" class="team-item">
+    <p>КОМАНДА SILVER HAWKS</p>
+    <img src="silver hawks team.jpg" alt="Team 11" style="margin-bottom: 10px;">
+    <hr class="full-width">
+</div>
+
+<div id="siren-serpents" class="team-item">
+    <p>КОМАНДА SIREN SERPENTS</p>
+    <img src="siren serpents team.jpg" alt="Team 12" style="margin-bottom: 10px;">
+    <hr class="full-width">
+</div>
+
+<div id="street-legends" class="team-item">
+    <p>КОМАНДА STREET LEGENDS</p>
+    <img src="street legends team.jpg" alt="Team 13" style="margin-bottom: 10px;">
+    <hr class="full-width">
+</div>
+
+<div id="thunder-strikers" class="team-item">
+    <p>КОМАНДА THUNDER STRIKERS</p>
+    <img src="thunder strikers team.jpg" alt="Team 14" style="margin-bottom: 10px;">
+    <hr class="full-width">
+</div>
+
+<div id="titan-kings" class="team-item">
+    <p>КОМАНДА TITAN KINGS</p>
+    <img src="titan kings team.jpg" alt="Team 15">
+</div>
+    </div>
+    </div>
+    <script>
+        // JavaScript-код для відкриття посилання при натисканні на благодійне повідомлення
+        function openLink() {
+            window.open("https://savelife.in.ua/en/donate-en/#donate-army-card-monthly", "_blank");
+        }
+        
+        // JavaScript-код для показу/приховання підменю
+        function toggleSubMenu() {
+            var submenu = document.querySelector('.submenu');
+            submenu.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>

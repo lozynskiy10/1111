@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти - Titan Kings</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body, html {
+            overflow: hidden; /* Заборона прокрутки для body та html */
+        }
+    </style>
+</head>
+<body>
+    <!-- Блок з темно-зеленою стрічкою та благодійним повідомленням -->
+    <div id="charity-banner" onclick="openLink()">
+        <p>ДОПОМОЖЕМО УКРАЇНІ - ПІДТРИМАЙТЕ БЛАГОДІЙНИЙ ФОНД "ПОВЕРНИСЬ ЖИВИМ"!</p>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="practice.html">Головна сторінка</a></li>
+            <li><a href="players.html">Гравці команд</a></li>
+            <li><a href="videos.html">Відео огляди матчів</a></li>
+            <li><a href="table.html">Турнірна таблиця</a></li>
+            <li><a href="rules.html">Правила гри 'Швидкий Футбол'</a></li>
+            <li><a href="contacts.html">Контакти</a></li>
+            <li class="submenu-trigger" onmouseover="toggleSubMenu()" onmouseout="toggleSubMenu()">Дивитись онлайн
+                <ul class="submenu">
+                    <li><a href="https://www.youtube.com/@WinnersGoalProCup" target="_blank">Швидкий футбол</a></li>
+                    <li><a href="https://www.twitch.tv/winnersbeachvolleyball_1" target="_blank">Пляжний волейбол</a></li>
+                    <li><a href="https://www.youtube.com/@WINCUP1-Table-Tennis/videos" target="_blank">Настільний теніс</a></li>
+                    <li><a href="https://www.esportclub.pro/ru" target="_blank">Кіберспорт</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div id="video-heading">
+        <p>ПОСИЛАННЯ НА НАШІ КОНТАКТИ</p>
+    </div>
+    <div class="button-container">
+        <div class="button-container">
+            <a href="https://www.facebook.com/winners.sports.hub" class="custom-button" target="_blank">FACEBOOK</a>
+        </div>
+        <div class="button-container">
+            <a href="https://www.instagram.com/winners_sports_hub/?next=%2F" class="custom-button" target="_blank">INSTAGRAM</a>
+        </div>
+        <div class="button-container">
+            <a href="https://www.youtube.com/@WinnersGoalProCup" class="custom-button" target="_blank">YOUTUBE</a>
+        </div>
+        <div class="button-container">
+            <a href="https://www.linkedin.com/company/winners-sports-hub/" class="custom-button" target="_blank">LINKEDIN</a>
+        </div>
+        <div class="button-container">
+            <a href="https://savelife.in.ua/en/donate-en/#donate-army-card-monthly" class="custom-button" target="_blank">БЛАГОДІЙНИЙ ФОНД "ПОВЕРНИСЬ ЖИВИЙ"</a>
+        </div>
+    </div>
+
+    <div id="sponsors-text">
+        <p>ПІДТРИМУЙ ТА ПРИЄДНЮЙСЯ ДО КОМАНДИ НАШИХ СПОНСОРІВ</p>
+        <div class="line"></div>
+      </div>
+
+    <div class="image23">
+        <a href="https://www.uttf.com.ua/" target="_blank">
+            <img src="sponsor1.png" alt="Sponsor 1">
+        </a>
+        <a href="https://www.ucef.org.ua/" target="_blank">
+            <img src="sponsor2.png" alt="Sponsor 2">
+        </a>
+        <a href="https://www.uqsf.org.ua/" target="_blank">
+            <img src="sponsor3.png" alt="Sponsor 3">
+        </a>
+        <a href="https://www.esuh.org/" target="_blank">
+            <img src="sponsor4.png" alt="Sponsor 4">
+        </a>
+        <a href="https://www.select-sport.com/" target="_blank">
+            <img src="sponsor5.png" alt="Sponsor 5">
+        </a>
+    </div>
+
+    <script>
+        var copyrightElement = document.getElementById('copyright');
+
+        window.addEventListener('scroll', function() {
+            var scrollPosition = window.scrollY;
+            var windowHeight = window.innerHeight;
+            var documentHeight = document.body.clientHeight;
+
+            // За допомогою умови перевірте, чи ви дійшли до нижньої частини сторінки
+            if (scrollPosition + windowHeight >= documentHeight) {
+                copyrightElement.style.opacity = '1';
+            } else {
+                copyrightElement.style.opacity = '0';
+            }
+        });
+    </script>
+   <video autoplay muted loop id="backgroundabout">
+    <source src="videoplayback.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+<div class="overlad"></div>
+    <!-- Додайте скрипти, як у practice.html -->
+
+    <script>
+        // JavaScript-код для відкриття посилання при натисканні на благодійне повідомлення
+        function openLink() {
+            window.open("https://savelife.in.ua/en/donate-en/#donate-army-card-monthly", "_blank");
+        }
+        
+        // JavaScript-код для показу/приховання підменю
+        function toggleSubMenu() {
+            var submenu = document.querySelector('.submenu');
+            submenu.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>

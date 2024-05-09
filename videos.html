@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Відео огляди матчів - Titan Kings</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Блок з темно-зеленою стрічкою та благодійним повідомленням -->
+    <div id="charity-banner" onclick="openLink()">
+        <p>ДОПОМОЖЕМО УКРАЇНІ - ПІДТРИМАЙТЕ БЛАГОДІЙНИЙ ФОНД "ПОВЕРНИСЬ ЖИВИМ"!</p>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="practice.html">Головна сторінка</a></li>
+            <li><a href="players.html">Гравці команд</a></li>
+            <li><a href="videos.html">Відео огляди матчів</a></li>
+            <li><a href="table.html">Турнірна таблиця</a></li>
+            <li><a href="rules.html">Правила гри 'Швидкий Футбол'</a></li>
+            <li><a href="contacts.html">Контакти</a></li>
+            <li class="submenu-trigger" onmouseover="toggleSubMenu()" onmouseout="toggleSubMenu()">Дивитись онлайн
+                <ul class="submenu">
+                    <li><a href="https://www.youtube.com/@WinnersGoalProCup" target="_blank">Швидкий футбол</a></li>
+                    <li><a href="https://www.twitch.tv/winnersbeachvolleyball_1" target="_blank">Пляжний волейбол</a></li>
+                    <li><a href="https://www.youtube.com/@WINCUP1-Table-Tennis/videos" target="_blank">Настільний теніс</a></li>
+                    <li><a href="https://www.esportclub.pro/ru" target="_blank">Кіберспорт</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div id="video-heading">
+        <p>НА ЦІЙ СТОРІНЦІ ВАС ЧЕКАЄ ВІДЕО-ОГЛЯД ВАЖЛИВИХ МАТЧІВ ДЛЯ КОМАНДИ TITAN KINGS</p>
+    </div>
+
+    <hr class="hr.full-width"> <!-- Горизонтальна лінія -->
+    <div class="video-ogliad">
+        <p>Матч Titan Kings за виліт з турніру, із командою Mighty Spartans. Рахунок (2:1). Дата: 17.11.2023</p>
+    </div>
+    <div class="video-container">
+        <iframe width="1120" height="630" src="https://www.youtube.com/embed/wGV3krRWYp0" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <hr class="fullz-width"> <!-- Горизонтальна лінія -->
+    <div class="video-ogliad5">
+        <p>Матч Titan Kings, найзабивна партія нашої історії, із командою Blaze Warriors. Рахунок (11:0). Дата: 07.11.2023</p>
+    </div>
+    <div class="video-containew">
+        <iframe width="1120" height="630" src="https://www.youtube.com/embed/cS7t8OFwjS8" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <hr class="fulls-width"> <!-- Горизонтальна лінія -->
+    <hr class="fulld-width"> <!-- Горизонтальна лінія -->
+    <div class="video-ogliad2">
+        <p>Матч Titan Kings за 3 очки у турнірій таблиці, із командою Silver Hawks. Рахунок (2:1). Дата: 19.12.2023</p>
+    </div>
+    <div class="video-containek">
+        <iframe width="1120" height="630" src="https://www.youtube.com/embed/u9PGfmcuak0" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <hr class="fullp-width"> <!-- Горизонтальна лінія -->
+    <div class="video-ogliad3">
+        <p>Матч Titan Kings в меншості під кінець поєдинку, сповнений емоцій, із командою Football Ninjas. Рахунок (5:3). Дата: 08.12.2023</p>
+    </div>
+    <div class="video-containeс">
+        <iframe width="1120" height="630" src="https://www.youtube.com/embed/xj-h-jpQ9wI" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <hr class="fulll-width"> <!-- Горизонтальна лінія -->
+    <div class="video-ogliad4">
+        <p>Матч Titan Kings із розгромним рахунком для суперника, із командою Joga Gangers. Рахунок (9:1). Дата: 10.11.2023</p>
+    </div>
+    <div class="video-containes">
+        <iframe width="1120" height="630" src="https://www.youtube.com/embed/f42lHQsozAg" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <hr class="fullb-width"> <!-- Горизонтальна лінія -->
+    <div class="video-ogliad1">
+        <p>Матч Titan Kings за 3 місце у турнірі, із командою Thunder Strikers. Рахунок (5:7). Дата: 13.12.2023</p>
+    </div>
+    <div class="video-containet">
+        <iframe width="1120" height="630" src="https://www.youtube.com/embed/mdw4BFeyFLA" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <hr class="fullq-width"> <!-- Горизонтальна лінія -->
+    <div class="video-ogliad9">
+        <p>Підбірка голів у складі команди Shadow Wolves</p>
+    </div>
+    <div class="video-football">
+        <video width="1120" height="630" controls>
+            <source src="Football.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p class="video-footbal">Football</p>
+    </div>
+    <script>
+        var copyrightElement = document.getElementById('copyright');
+
+        window.addEventListener('scroll', function() {
+            var scrollPosition = window.scrollY;
+            var windowHeight = window.innerHeight;
+            var documentHeight = document.body.clientHeight;
+
+            // За допомогою умови перевірте, чи ви дійшли до нижньої частини сторінки
+            if (scrollPosition + windowHeight >= documentHeight) {
+                copyrightElement.style.opacity = '1';
+            } else {
+                copyrightElement.style.opacity = '0';
+            }
+        });
+    </script>
+    <img src="background for videos.jpg" alt="Background Image" id="background-image">
+    <!-- Додайте скрипти, як у practice.html -->
+    <script>
+        // JavaScript-код для відкриття посилання при натисканні на благодійне повідомлення
+        function openLink() {
+            window.open("https://savelife.in.ua/en/donate-en/#donate-army-card-monthly", "_blank");
+        }
+        
+        // JavaScript-код для показу/приховання підменю
+        function toggleSubMenu() {
+            var submenu = document.querySelector('.submenu');
+            submenu.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WINNERS SPORTS HUB - TITAN KINGS</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+    <!-- Блок з темно-зеленою стрічкою та благодійним повідомленням -->
+    <div id="charity-banner" onclick="openLink()">
+        <p>ДОПОМОЖЕМО УКРАЇНІ - ПІДТРИМАЙТЕ БЛАГОДІЙНИЙ ФОНД "ПОВЕРНИСЬ ЖИВИМ"!</p>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="practice.html">Головна сторінка</a></li>
+            <li><a href="players.html">Гравці команд</a></li>
+            <li><a href="videos.html">Відео огляди матчів</a></li>
+            <li><a href="table.html">Турнірна таблиця</a></li>
+            <li><a href="rules.html">Правила гри 'Швидкий Футбол'</a></li>
+            <li><a href="contacts.html">Контакти</a></li>
+            <li class="submenu-trigger" onmouseover="toggleSubMenu()" onmouseout="toggleSubMenu()">Дивитись онлайн
+                <ul class="submenu">
+                    <li><a href="https://www.youtube.com/@WinnersGoalProCup" target="_blank">Швидкий футбол</a></li>
+                    <li><a href="https://www.twitch.tv/winnersbeachvolleyball_1" target="_blank">Пляжний волейбол</a></li>
+                    <li><a href="https://www.youtube.com/@WINCUP1-Table-Tennis/videos" target="_blank">Настільний теніс</a></li>
+                    <li><a href="https://www.esportclub.pro/ru" target="_blank">Кіберспорт</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="centered-text">
+        <p class="bold-text">WINNERS SPORTS HUB -</p>
+        <p>міжнародна компанія, яка об'єднює в собі багато спортивних дисциплін, з своїми унікальними правилами та специфіками. Серед таких: швидкий футбол, пляжний волейбол, настільний теніс, кіберспорт, тощо.</p>
+    </div>
+
+    <div id="teams-container">
+        <div id="teams-list">
+            РОЗГЛЯНЕМО СПИСОК УСІХ КОМАНД З ДИСЦИПЛІНИ 'ШВИДКИЙ ФУТБОЛ':
+        </div>
+        <div id="image-grid" class="image-container">
+            <a href="players.html#blaze-warriors" onclick="showTeamName('КОМАНДА BLAZE WARRIORS')">
+                <img src="blaze warriors.jpg" alt="Image 1">
+            </a>
+            <a href="players.html#city-lions" onclick="showTeamName('КОМАНДА CITY LIONS')">
+                <img src="city lions.jpg" alt="Image 2">
+            </a>
+            <a href="players.html#football-ninjas" onclick="showTeamName('КОМАНДА FOOTBALL NINJAS')">
+                <img src="football ninjas.jpg" alt="Image 3">
+            </a>
+            <a href="players.html#joga-gangers" onclick="showTeamName('КОМАНДА JOGA GANGERS')">
+                <img src="joga gangers.jpg" alt="Image 4">
+            </a>
+            <a href="players.html#liberty-tigers" onclick="showTeamName('КОМАНДА LIBERTY TIGERS')">
+                <img src="liberty tigers.jpg" alt="Image 5">
+            </a>
+            <a href="players.html#maverick-avengers" onclick="showTeamName('КОМАНДА MAVERICK AVENGERS')">
+                <img src="maverick avengers.jpg" alt="Image 6">
+            </a>
+            
+            <a href="players.html#mighty-spartans" onclick="showTeamName('КОМАНДА MIGHTY SPARTANS')">
+                <img src="mighty spartans.jpg" alt="Image 7">
+            </a>
+            
+            <a href="players.html#razor-sharks" onclick="showTeamName('КОМАНДА RAZOR SHARKS')">
+                <img src="razor sharks.jpg" alt="Image 8">
+            </a>
+            
+            <a href="players.html#savage-hunters" onclick="showTeamName('КОМАНДА SAVAGE HUNTERS')">
+                <img src="savage hunters.jpg" alt="Image 9">
+            </a>
+            
+            <a href="players.html#shadow-wolves" onclick="showTeamName('КОМАНДА SHADOW WOLVES')">
+                <img src="shadow wolves.jpg" alt="Image 10">
+            </a>
+            
+            <a href="players.html#silver-hawks" onclick="showTeamName('КОМАНДА SILVER HAWKS')">
+                <img src="silver hawks.jpg" alt="Image 11">
+            </a>
+            
+            <a href="players.html#siren-serpents" onclick="showTeamName('КОМАНДА SIREN SERPENTS')">
+                <img src="siren serpents.jpg" alt="Image 12">
+            </a>
+            
+            <a href="players.html#street-legends" onclick="showTeamName('КОМАНДА STREET LEGENDS')">
+                <img src="street legends.jpg" alt="Image 13">
+            </a>
+            
+            <a href="players.html#thunder-strikers" onclick="showTeamName('КОМАНДА THUNDER STRIKERS')">
+                <img src="thunder strikers.jpg" alt="Image 14">
+            </a>
+            
+            <a href="players.html#titan-kings" onclick="showTeamName('КОМАНДА TITAN KINGS')">
+                <img src="titan kings.jpg" alt="Image 15">
+            </a>
+        </div>
+    </div>
+    <div id="teams-listtt">
+        <p>НАТИСКАЙ НА ЗОБРАЖЕННЯ КОМАНДИ, ЩОБ ДІЗНАТИСЬ СКЛАД ГРАВЦІВ!</p>
+    </div>
+    
+    <div id="team-name"></div>
+
+    <div id="greeting-text">
+        <p>ДОДАТКОВА ІНФОРМАЦІЯ</p>
+        <p>Кожна з команд має унікальний рейтинг, який ділиться за середнім значенням від індевідуального рейтинга кожного з гравців команди. Відповідно, чим більшого результату приносять гравці команді та покращують свої індивідуальні навички, тим цей рейтинг стає більшим;</p>
+        <p>Кожна команда складається з 8 гравців. Щоденно, на матчах присутні 5 гравців команди. 4 основних та 1 запасний гравець;</p>
+        <p>Можливо переглянути кількість пропущених та забитих м'ячів кожної з команд, рейтинг перемог/нічиїх/поразок, а також форму останній 5 матчів за результатами;</p>
+        <p>Підтримати своїх улюбленців можна завдяки нашим онлайн трансляціях та новинах на таких платформах, як: "Twitch", "YouTube", "Instagram", "TikTok";</p>
+        <p>Найголовніше: Кожен, хто любить футбол та живе цим спортом, може заповнити анкету на основному сайті та отримати можливість випробувати свої сили на нашому полі. Чекаємо саме на тебе!</p>
+    </div>
+    
+    
+    <div id="copyright">
+        <p>&copy; 2023 Titan Kings Football Team</p>
+    </div>
+
+    <script>
+        var copyrightElement = document.getElementById('copyright');
+
+    window.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY;
+    var windowHeight = window.innerHeight;
+    var documentHeight = document.body.clientHeight;
+
+    // За допомогою умови перевірте, чи ви дійшли до нижньої частини сторінки
+    if (scrollPosition + windowHeight >= documentHeight) {
+        copyrightElement.style.opacity = '1';
+    } else {
+        copyrightElement.style.opacity = '0';
+    }
+});
+    </script>
+   
+    <video autoplay loop muted id="background-video">
+        <source src="file.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+    <script>
+        // JavaScript-код для відео на задньому фоні
+        var video = document.getElementById('background-video');
+        video.playbackRate = 1; // Змінити швидкість відтворення (опціонально)
+    </script>
+    <script>
+        // JavaScript-код для відкриття посилання при натисканні на благодійне повідомлення
+        function openLink() {
+            window.open("https://savelife.in.ua/en/donate-en/#donate-army-card-monthly", "_blank");
+        }
+        
+        // JavaScript-код для показу/приховання підменю
+        function toggleSubMenu() {
+            var submenu = document.querySelector('.submenu');
+            submenu.classList.toggle('show');
+        }
+    </script>
+    <script>
+        // JavaScript-код для визначення, яку картинку показати
+        document.addEventListener("DOMContentLoaded", function () {
+            var teamParam = new URLSearchParams(window.location.search).get("team");
+            var teamImage = document.getElementById("team-image");
+
+            if (teamParam === "blaze-warriors") {
+                teamImage.src = "blaze warriors team.jpg";
+            } else if (teamParam === "city-lions") {
+                teamImage.src = "city lions team.jpg";
+            }
+            // Додайте інші умови для інших команд, якщо потрібно
+        });
+
+        // JavaScript-код для показу назви команди
+        function showTeamName(teamName) {
+            var teamNameElement = document.getElementById("team-name");
+            teamNameElement.textContent = teamName;
+        }
+    </script>
+</body>
+</html>
